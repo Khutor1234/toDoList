@@ -1,11 +1,24 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
+
 import TodoListItem from './TodoListItem';
 
-const TodoList = () => {
+// eslint-disable-next-line react/prop-types
+const TodoList = ({ todos }) => {
     return (
         <ul>
-            <li><TodoListItem /></li>
-            <li><TodoListItem /></li>
+            <li><TodoListItem 
+            label = {todos[0].label} 
+            important= {todos[0].important}
+            /></li>
+            <li><TodoListItem 
+            label = {todos[1].label} 
+            important= {todos[1].important}
+            /></li>
+            <li><TodoListItem 
+            label = {todos[2].label} 
+            important= {todos[2].important}
+            /></li>
         </ul>  
     );
 };
